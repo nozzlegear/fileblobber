@@ -98,7 +98,7 @@ blobber.getFileBlobs(input)
     })
     .then((images) =>
     {
-        return images.map(i => blobber.scaleBase64(i.base64, {height: 400, width: 400, preserveRatio: true}));
+        return Promise.all(images.map(i => blobber.scaleBase64(i.base64, {height: 400, width: 400, preserveRatio: true})));
     })
     .then((scaledImages) =>
     {
