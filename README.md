@@ -1,6 +1,6 @@
 # image-blobber
 
-A small module for reading image file blob dimensions and scaling them to a max height or width.
+A small module for reading image file base64/dimensions, and scaling them to a max height or width.
 
 ## Installation
 
