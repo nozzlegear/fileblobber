@@ -138,4 +138,4 @@ The following interfaces are used or returned at some point by image-blobber. If
 | -------- | ---- | -------- |
 | height | number | The maximum height allowed for a scaled image. Optional, but options must include either a height or width. |
 | width | number | The maximum width allowed for a scaled image. Optional, but options must include either a height or width. |
-| preserveRation | boolean | Whether aspect ratio should be preserved. If true, image will be scaled to an aspect ratio that satisfies both `height` and `width`. Default true. |
+| preserveRatio | boolean | Whether aspect ratio should be preserved. If true, image will be scaled to an aspect ratio that satisfies both `height` and `width`. Default true. |
