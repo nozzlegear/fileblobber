@@ -1,0 +1,32 @@
+{
+  "name": "image-blobber",
+  "version": "1.0.0",
+  "description": "A small module for reading HTML5 file blobs.",
+  "main": "bin/index.js",
+  "typings": "index",
+  "scripts": {
+    "prepublish": "tsc -p .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nozzlegear/fileblobber.git"
+  },
+  "keywords": [
+    "fileblob",
+    "blob",
+    "file",
+    "html5",
+    "filereader"
+  ],
+  "author": "Joshua Harms <joshua@nozzlegear.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nozzlegear/fileblobber/issues"
+  },
+  "homepage": "https://github.com/nozzlegear/fileblobber#readme",
+  "dependencies": {
+    "@types/bluebird": "^2.0.22-alpha",
+    "bluebird": "^3.4.0"
+  }
+}
