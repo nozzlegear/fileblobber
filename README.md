@@ -35,7 +35,7 @@ if (!Supported)
 }
 ```
 
-### getFileBlobs(input: HtmlInputElement): Promise<File[]>
+### getFileBlobs(input: HtmlInputElement): Promise\<File[]\>
 
 Gets all file blobs for an HTML5 file input element.
 
@@ -50,7 +50,7 @@ getFileBlobs(input).then((blobs) =>
 });
 ```
 
-### getBase64(file: File): Promise<BlobDetails>
+### getBase64(file: File): Promise\<BlobDetails\>
 
 Gets the base64 string, filename and dimensions for the given image file. See [below](#interfaces) for the `BlobDetails` interface.
 
@@ -67,9 +67,9 @@ getBase64(file).then((details) =>
 });
 ```
 
-### scaleBase64(base64: string, options: ScaleOptions): Promise<ScaleResult>
+### scaleBase64(base64: string, options: ScaleOptions): Promise\<ScaleResult\>
 
-Scales a base64 image string according to the options passed in. See [below](#interfaces) fro the `ScaleOptions` and `ScaleResult` interfaces.
+Scales a base64 image string according to the options passed in. See [below](#interfaces) for the `ScaleOptions` and `ScaleResult` interfaces.
 
 ```ts
 import {scaleBase64} from "image-blobber";
