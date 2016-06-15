@@ -77,10 +77,10 @@ function getImageData(base64: string)
                 width: image.naturalWidth,
             };
 
-            return {
+            return resolve ({
                 dimensions: dimensions,
                 image: image,
-            }
+            })
         };
 
         image.onabort = (event) => reject(event);

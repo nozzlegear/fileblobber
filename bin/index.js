@@ -15,10 +15,10 @@ function getImageData(base64) {
                 height: image.naturalHeight,
                 width: image.naturalWidth,
             };
-            return {
+            return resolve({
                 dimensions: dimensions,
                 image: image,
-            };
+            });
         };
         image.onabort = function (event) { return reject(event); };
         image.src = base64;

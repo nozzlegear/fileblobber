@@ -1,6 +1,6 @@
 {
   "name": "image-blobber",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A small module for reading HTML5 image file blobs.",
   "main": "bin/index.js",
   "typings": "index",
