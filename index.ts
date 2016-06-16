@@ -7,13 +7,8 @@ export interface Dimensions
     width: number;
 }
 
-export interface BlobDetails
+export interface BlobData
 {
-    /**
-     * The image's filename as it is on the user's machine.
-     */
-    filename: string;
-    
     /**
      * The base64 image.
      */
@@ -25,17 +20,13 @@ export interface BlobDetails
     dimensions: Dimensions;
 }
 
-export interface ScaleResult
+export interface BlobDetails extends BlobData
 {
     /**
-     * The base64 image, scaled down to a 400x400 ratio
+     * The image's filename as it is on the user's machine.
      */
-    scaledBase64: string;
+    filename: string;
     
-    /**
-     * The scaled image's dimensions.
-     */
-    scaledDimensions: Dimensions;
 }
 
 export interface ScaleOptions
@@ -170,9 +161,9 @@ export function scaleBase64(base64: string, options: ScaleOptions)
 
             if (!scaleDown)
             {
-                const result: ScaleResult = {
-                    scaledBase64: base64,
-                    scaledDimensions: dimensions,
+                const result: BlobData = {
+                    base64: base64,
+                    dimensions: dimensions,
                 };
 
                 return result;
@@ -208,9 +199,9 @@ export function scaleBase64(base64: string, options: ScaleOptions)
 
         context.drawImage(imageData.image, 0, 0, fullDimensions.width, fullDimensions.height, 0, 0, dimensions.width, dimensions.height);
 
-        const result: ScaleResult = {
-            scaledBase64: canvas.toDataURL(),
-            scaledDimensions: dimensions  
+        const result: BlobData = {
+            base64: canvas.toDataURL(),
+            dimensions: dimensions  
         };
 
         return result;

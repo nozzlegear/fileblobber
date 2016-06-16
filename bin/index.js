@@ -83,8 +83,8 @@ function scaleBase64(base64, options) {
             var scaleDown = (options.height && fullDimensions.height > options.height) || (options.width && fullDimensions.width > options.width);
             if (!scaleDown) {
                 var result_1 = {
-                    scaledBase64: base64,
-                    scaledDimensions: dimensions,
+                    base64: base64,
+                    dimensions: dimensions,
                 };
                 return result_1;
             }
@@ -110,8 +110,8 @@ function scaleBase64(base64, options) {
         canvas.width = dimensions.width;
         context.drawImage(imageData.image, 0, 0, fullDimensions.width, fullDimensions.height, 0, 0, dimensions.width, dimensions.height);
         var result = {
-            scaledBase64: canvas.toDataURL(),
-            scaledDimensions: dimensions
+            base64: canvas.toDataURL(),
+            dimensions: dimensions
         };
         return result;
     });
