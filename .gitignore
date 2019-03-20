@@ -38,3 +38,6 @@ jspm_packages
 
 # Ignore typings files to avoid breaking dependent builds.
 typings/
+
+# Ignore built files
+bin
